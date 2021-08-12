@@ -65,15 +65,29 @@
 							<td class="col-2">${ meter.AmpLocPhsA }</td>
 							<td class="col-2">${ meter.AmpLocPhsB }</td>
 							<td class="col-2">${ meter.AmpLocPhsC }</td>
-							<td class="col-3">${ (parseFloat(meter.AmpLocPhsA) + parseFloat(meter.AmpLocPhsB) + parseFloat(meter.AmpLocPhsC)).toFixed(2) }</td>
+							<td class="col-3">${ meter.AmpLocPhsSUM }</td>
 						</tr>
 						<tr class="d-flex" v-if="meter.WLocPhsA != null || meter.WLocPhsB != null || meter.WLocPhsC != null">
 							<td class="col-3">Power (W)</td>
 							<td class="col-2">${ meter.WLocPhsA }</td>
 							<td class="col-2">${ meter.WLocPhsB }</td>
 							<td class="col-2">${ meter.WLocPhsC }</td>
-							<td class="col-3">${ (parseFloat(meter.WLocPhsA) + parseFloat(meter.WLocPhsB) + parseFloat(meter.WLocPhsB)).toFixed(2) }</td>
+							<td class="col-3">${ meter.WLocPhsSUM }</td>
 						</tr>
+						<tr class="d-flex" v-if="meter.L1_TotalKwh != null || meter.L2_TotalKwh != null || meter.L3_TotalKwh != null">
+							<td class="col-3">Total kwh (kwh)</td>
+							<td class="col-2">${ meter.L1_TotalKwh }</td>
+							<td class="col-2">${ meter.L2_TotalKwh }</td>
+							<td class="col-2">${ meter.L3_TotalKwh }</td>
+							<td class="col-3">${ meter.TotalKwh }</td>
+						</tr>
+						<tr class="d-flex" v-if="meter.V_L1_l2 != null || meter.V_L2_l3 != null || meter.V_L3_l1 != null">
+							<td class="col-3">LX_LY (kwh)</td>
+							<td class="col-2">${ meter.V_L1_l2 }</td>
+							<td class="col-2">${ meter.V_L2_l3 }</td>
+							<td class="col-2">${ meter.V_L3_l1 }</td>
+							<td class="col-3">-</td>
+						</tr>						
 						<tr class="d-flex" v-if="meter.TotkWhImportPhsA != null || meter.TotkWhImportPhsB != null || meter.TotkWhImportPhsC != null || meter.TotkWhImport != null">
 							<td class="col-3">Import (kWh)</td>
 							<td class="col-2">${ meter.TotkWhImportPhsA }</td>
@@ -107,7 +121,20 @@
 							<td class="col-2">-</td>
 							<td class="col-2">-</td>
 							<td class="col-2">-</td>
-							<td class="col-3">${ meter.Frequency }</td>
+							<td class="col-3">${ meter.Freq }</td>
+						</tr>
+						<tr class="d-flex" v-if="meter.TotalKvarh != null">
+							<td class="col-3">Total Kvarh</td>
+							<td class="col-2">-</td>
+							<td class="col-2">-</td>
+							<td class="col-2">-</td>
+							<td class="col-3">${ meter.TotalKvarh }</td>
+						<tr class="d-flex" v-if="meter.NeuCurrent != null">
+							<td class="col-3">Neutral Current (A) </td>
+							<td class="col-2">-</td>
+							<td class="col-2">-</td>
+							<td class="col-2">-</td>
+							<td class="col-3">${ meter.NeuCurrent }</td>				
 						</tr>
 					</tbody>
 				</table>

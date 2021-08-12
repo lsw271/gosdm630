@@ -18,6 +18,33 @@ const (
 	OpCodeSDML1Power     = 0x000C
 	OpCodeSDML2Power     = 0x000E
 	OpCodeSDML3Power     = 0x0010
+	
+	OpCodeSDMTotalSysPow     = 0x0034
+	OpCodeSDMSumCurr         = 0x0010
+	/* add another registers
+	OpCodeSDML3Power     = 0x0010
+	
+	OpCodeSDML3Power     = 0x0010
+	OpCodeSDML3Power     = 0x0010
+	OpCodeSDML3Power     = 0x0010
+	
+	OpCodeSDML3Power     = 0x0010
+	OpCodeSDML3Power     = 0x0010
+	OpCodeSDML3Power     = 0x0010
+	
+	OpCodeSDML3Power     = 0x0010
+	OpCodeSDML3Power     = 0x0010
+	OpCodeSDML3Power     = 0x0010
+	
+	OpCodeSDML3Power     = 0x0010
+	OpCodeSDML3Power     = 0x0010
+	OpCodeSDML3Power     = 0x0010
+	
+	OpCodeSDML3Power     = 0x0010
+	OpCodeSDML3Power     = 0x0010
+	OpCodeSDML3Power     = 0x0010	
+	*/
+	
 	OpCodeSDML1Import    = 0x015a
 	OpCodeSDML2Import    = 0x015c
 	OpCodeSDML3Import    = 0x015e
